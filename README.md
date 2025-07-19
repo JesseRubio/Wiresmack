@@ -1,9 +1,9 @@
-# **Airsmack**
+# **Wiresmack**
 
-_Airsmack is a tool designed for wireless network monitoring and attack automation using Airodump-ng and related utilities._
+_Wiresmack is a tool designed for wireless network monitoring and attack automation using Airodump-ng and related utilities._
 
 ## Overview
-Airsmack streamlines *wireless security assessments* by automating data collection, deauthentication attacks, and handshake captures. It integrates *multiprocessing*, *subprocess management*, and *custom scripting* for efficient execution.
+Wiresmack streamlines *wireless security assessments* by automating data collection, deauthentication attacks, and handshake captures. It integrates *multiprocessing*, *subprocess management*, and *custom scripting* for efficient execution.
 
 **Developed and Tested on:**
 ```
@@ -15,23 +15,23 @@ Airsmack streamlines *wireless security assessments* by automating data collecti
 sudo apt install cowpatty
 ```
 ```bash
-git clone https://github.com/B34MR/airsmack.git
-cd airsmack
+git clone https://github.com/jesserubio/wiresmack.git
+cd wiresmack
 pip install -r requirements.txt
 ```
 
 **Docker Installation:**
 ```bash
-git clone https://github.com/B34MR/airsmack.git
-cd airsmack
-docker build -t airsmack .
-docker run -it --rm --privileged --network=host -v "$(pwd)":/opt/airsmack airsmack 
+git clone https://github.com/jesserubio/wiresmack.git
+cd wiresmack
+docker build -t wiresmack .
+docker run -it --rm --privileged --network=host -v "$(pwd)":/opt/wiresmack wiresmack
 ```
 
 **Usage:**
 ```python
 Usage Examples:
-  python airsmack.py -i wlan0 -p5
+  python wiresmack.py -i wlan0 -p5
 
 
 Interface Arguments:
@@ -43,14 +43,16 @@ Aireplay-ng Arguments:
 Global Arguments:
   --debug  Set logging level [DEBUG]
 ```
-Run Airsmack, select target ESSID and capture the Four-way Handshake!
+Run Wiresmack, select target ESSID and capture the Four-way Handshake!
 ```python
 ╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 │                                                                                                             │
-│        / \(((_)))___ ___  ___ _    __    ___ __ __                                                          │
-│       / _ \ | | '__/ __| '_ ` _ \ / _` |/ __| |/ /                                                          │
-│      / ___ \| | |  \__ \ | | | | | (_| | (__|   <                                                           │
-│     /_/   \_\_|_|  |___/_| |_| |_|\__,_|\___|_|\_\                                                          │
+|                    __      __.__                                             __                             |
+|                   /  \    /  \__|______   ____   ______ _____ _____    ____ |  | __                         |
+|                   \   \/\/   /  \_  __ \_/ __ \ /  ___//     \\__  \ _/ ___\|  |/ /                         |
+|                    \        /|  ||  | \/\  ___/ \___ \|  Y Y  \/ __ \\  \___|    <                          |
+|                     \__/\  / |__||__|    \___  >____  >__|_|  (____  /\___  >__|_ \                         |
+|                          \/                  \/     \/      \/     \/     \/     \/                         │
 │                                                                                                             │
 ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ╭─ Target ────────────────────────────────────────────────────────────────────────────────────────────────────╮
